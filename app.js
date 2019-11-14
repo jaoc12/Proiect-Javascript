@@ -20,5 +20,5 @@ app.get('/promotii', function(req, res) {
 app.use('/css', express.static('css'));
 app.use('/imagini', express.static('imagini'));
 
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
 console.log('Aplicatia se va deschide pe portul 8080.');
