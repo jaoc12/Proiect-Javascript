@@ -1,0 +1,22 @@
+{
+  "name": "proiect_tehnici_web",
+  "version": "1.0.0",
+  "description": "Proiect tehnici web",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "node",
+    "proiect"
+  ],
+  "author": "Chitu Stefan-Catalin",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "12.13.0"
+  }
+}

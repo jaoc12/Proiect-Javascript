@@ -1,0 +1,8 @@
+.des{
+	display: block;
+}
+
+.descriere, .audienta{
+	float: none;
+	width: 100%;
+}

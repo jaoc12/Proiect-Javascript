@@ -1,0 +1,39 @@
+h2{
+	font-size: 1.5em;
+}
+
+.contact{
+	border: 2px solid orange;
+	width: 50%;
+	float: left;
+}
+
+.contact > ol{
+	text-align: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.informatii{
+	border: 2px solid orange;
+	width: 50%;
+}
+
+.informatii > ul{
+	text-align: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.final{
+	display: flex;
+	margin-top: 5%;
+	color: white;
+}
+
+footer p{
+	color: white;
+	text-align: center;
+}

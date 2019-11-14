@@ -1,0 +1,45 @@
+.promotii{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	display: grid;
+	background-image: url("../imagini/poze/background.jpg");
+	background-size: 100% 100%;
+}
+
+article:nth-child(even){
+	background: gray;
+	grid-row: 2;
+}
+
+article:nth-child(odd){
+	background: black;
+	grid-row: 3;
+}
+
+article{
+	margin: 2%;
+	border: 2px solid orange;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2, h3{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: orange;
+	text-align: center;
+}
+
+.promotii h2{
+	grid-column: 1 / span 2;
+}
+
+.promotii p{
+	padding: 2%;
+	color: orange;
+	text-align: center;
+}
+
+ins{
+	text-decoration: none;
+}

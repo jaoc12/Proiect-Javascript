@@ -1,0 +1,40 @@
+.program{
+	display: block;
+	padding: 2%;
+}
+
+table, tbody, th, td, tr { 
+	display: block; 
+}
+
+table{
+	width: 90%;
+}
+
+caption{
+	display: table;
+	width: 100%;
+}
+
+thead{
+	display: none;
+}
+
+td:nth-child(1):before{
+	content: "ORA:";
+}
+
+td:nth-child(2):before{
+	content: "FORMAT:";
+}
+
+td:nth-child(3):before{
+	content: "SALA:";
+}
+
+td:before{
+	background: black;
+	width: 45%;
+	float: left;
+	border-right: 2px solid black;
+}

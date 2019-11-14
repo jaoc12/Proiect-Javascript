@@ -1,0 +1,53 @@
+h2{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: orange;
+	text-align: center;
+}
+
+.moment{
+	background-image: url("../imagini/poze/background.jpg");
+	background-size: 100% 100%;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.popular{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	height: auto;
+	border: 1px solid orange;
+}
+
+.descriere{
+	margin: auto;
+	float: left;
+	width: 50%;
+}
+
+.descriere p{
+	font-size: 20px;
+	color: white;
+	padding-left: 10%;
+}
+
+b{
+	font-weight: normal;
+}
+
+.des{
+	display: flex;
+	overflow: hidden;
+	border: 5px solid orange;
+}
+
+.audienta{
+	display: block;
+	margin: auto;
+	float:right;
+	height: 100%;
+	width: 50%;
+}

@@ -1,0 +1,50 @@
+body{
+	background-color: black;
+}
+
+.cinema{
+	background: url("../imagini/poze/background.jpg");
+	background-size: 100% 100%;
+}
+
+.program{
+	display: grid;
+	width: 100%;
+}
+
+h2{
+	font-size: 50px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: orange;
+	text-align: center;
+}
+
+table{
+	text-align: center;
+	background: green;
+	color: orange;
+	font-size: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2%;
+	width: 50%;
+	border-collapse: collapse;
+}
+
+caption{
+	background: orange;
+	color: white;
+}
+
+th{
+	font-variant: small-caps;
+	background-color: white;
+}
+
+table, td, th {
+	border: 1px solid black;
+}
+
+table:nth-child(odd){
+	grid-row: 1;
+}
