@@ -37,7 +37,7 @@ li a, h1 a{
 	width: 100%;
 }
 
-.sub-meniu:hover .meniu-continut{
+.sub-meniu:hover .meniu-continut, .sub-meniu:active .meniu-continut{
 	display: block;
 }
 
