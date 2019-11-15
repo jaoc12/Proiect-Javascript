@@ -16,6 +16,9 @@ app.get('/filme', function(req, res) {
 app.get('/promotii', function(req, res) {
     res.render('html/promotii');
 });
+app.get('/bilete', function(req, res) {
+    res.render('html/bilete');
+});
 
 app.use('/css', express.static('css'));
 app.use('/imagini', express.static('imagini'));

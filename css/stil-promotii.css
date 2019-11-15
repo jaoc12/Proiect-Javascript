@@ -7,7 +7,7 @@
 }
 
 article:nth-child(even){
-	background: gray;
+	background: green;
 	grid-row: 2;
 }
 
