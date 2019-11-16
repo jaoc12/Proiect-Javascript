@@ -1,4 +1,4 @@
 window.onload = function() {
-	body.onlick() = function() {
+	body.ontouchstart() = function() {
 	};
 };
