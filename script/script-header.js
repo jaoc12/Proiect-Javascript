@@ -1,4 +1,5 @@
-window.onload = function() {
-	document.getElementsByClassName("meniu).onclick = function() {
-	};
+window.addEventListener("load",degeaba);
+
+function degeaba(){
+	// asa functioneaza :focus pe iOS
 };
