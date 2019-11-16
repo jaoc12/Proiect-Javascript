@@ -1,6 +1,3 @@
 window.onload = function() {
-	document.body.addEventListener(‘touchstart’,degeaba);
-};
-
-function degeaba(){
+	document.body.addEventListener('touchstart',function(){},false);
 };
