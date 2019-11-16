@@ -1,4 +1,4 @@
-window.onload = function(){
+window.onload = function() {
 	document.getElementById("acum").onclick = function() {
 		showHide("container-viitor","container-acum");
 	};
@@ -7,7 +7,7 @@ window.onload = function(){
 	};
 };
 
-function showHide(container1, container2){
+function showHide(container1, container2) {
 	var x = document.getElementById(container1);
 	var y = document.getElementById(container2);
 	x.style.display = "none";
