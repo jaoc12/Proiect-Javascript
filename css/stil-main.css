@@ -22,6 +22,23 @@ h2{
 	border: 1px solid orange;
 }
 
+blockquote{
+	text-align: center;
+	font-size: 1.5em;
+	color: orange;
+	background: green;
+	margin-top: 5%;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid black;
+}
+
+.des{
+	display: flex;
+	border: 5px solid orange;
+}
+
 .descriere{
 	margin: auto;
 	float: left;
@@ -29,19 +46,13 @@ h2{
 }
 
 .descriere p{
-	font-size: 20px;
+	text-align: center;
+	font-size: 1.25em;
 	color: white;
-	padding-left: 10%;
 }
 
 b{
 	font-weight: normal;
-}
-
-.des{
-	display: flex;
-	overflow: hidden;
-	border: 5px solid orange;
 }
 
 .audienta{

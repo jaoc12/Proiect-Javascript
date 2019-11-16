@@ -4,13 +4,17 @@ h2{
 	text-align: center;
 }
 
+address{
+	font-style: normal;
+}
+
 .contact{
 	border: 1px solid orange;
 	width: 50%;
 	float: left;
 }
 
-.contact > ol{
+address > ol{
 	text-align: center;
 	list-style-type: none;
 	margin: 0;
