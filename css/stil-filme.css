@@ -2,13 +2,30 @@ body{
 	background-color: black;
 }
 
-h2{
-	color: orange;
-	text-align: center;
+.butoane{
+	margin-top: 2%;
+	display: flex;
+	justify-content: center;
+	border: 1px solid orange;
+}
+
+.butoane h2{
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	margin: 2%;
+	padding: 2%;
+}
+
+.butoane h2:hover{
+	color: white;
 }
 
 .container{
 	display: block;
+}
+
+#container-viitor{
+	display: none;
 }
 
 .film{

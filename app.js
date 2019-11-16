@@ -22,6 +22,7 @@ app.get('/bilete', function(req, res) {
 
 app.use('/css', express.static('css'));
 app.use('/imagini', express.static('imagini'));
+app.use('/script', express.static('script'));
 
 app.listen(process.env.PORT || 8080);
 console.log('Aplicatia se va deschide pe portul 8080.');

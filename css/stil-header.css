@@ -61,6 +61,6 @@ li a{
 	text-align: center;
 }
 
-li a:hover,li a:active, li p:hover, li p:hover{
+li a:hover, li p:hover{
 	color: white;
 }

@@ -12,15 +12,19 @@
 		<link type="text/css" rel="stylesheet" href="../css/stil-header.css"/>
 		<link type="text/css" rel="stylesheet" href="../css/stil-footer.css"/>
 		<link type="text/css" rel="stylesheet" href="../css/stil-filme-650.css" media="screen and (max-width:650px)"/>
+		<script type="text/javascript" src="../script/script-filme.js"></script>
 	</head>
 		<body>
 			<header>
 				<% include ../fragmente/header %>
 			</header>
 			<main>
-				<section>
-					<h2>Ruleaza acum</h2>
-					<div class="container">
+				<div>
+					<div class="butoane">
+						<h2 id="acum">Ruleaza acum</h2>
+						<h2 id="viitor">In curand</h2>
+					</div>
+					<div class="container" id="container-acum">
 						<div class="film" id="popular">
 							<iframe src="https://www.youtube.com/embed/ZlW9yhUKlkQ"></iframe>
 							<table>
@@ -74,59 +78,113 @@
 							</table>
 						</div>
 						<div class="film">
-							<iframe src="https://www.youtube.com/embed/ZlW9yhUKlkQ"></iframe>
+							<iframe src="https://www.youtube.com/embed/BOzFZxB-8cw"></iframe>
 							<table>
-								<caption>Zombieland: Double Tap</caption>
+								<caption>Doctor Sleep</caption>
 								<tr>
 									<th>Gen</th>
-									<td>Actiune, Comedie, Horror</td>
+									<td>Thriller, Horror</td>
 								</tr>
 								<tr>
 									<th>Durata</th>
-									<td>1h 39min</td>
+									<td>2h 31min</td>
 								</tr>
 								<tr>
 									<th>Distributie</th>
-									<td>Emma Stone, Abigail Breslin, Bill Murray</td>
+									<td>Rebbeca Ferguson, Ewan McGregor, Jacob Tremblay</td>
 								</tr>
 								<tr>
 									<th>Regizor</th>
-									<td>Ruben Fleischer</td>
+									<td>Mike Flanagan</td>
 								</tr>
 								<tr>
 									<th>Clasificare</th>
-									<td>Nerecomandat copiilor sub 15 ani</td>
+									<td>IM-18</td>
 								</tr>
 							</table>
 						</div>
 						<div class="film">
-							<iframe src="https://www.youtube.com/embed/ZlW9yhUKlkQ"></iframe>
+							<iframe src="https://www.youtube.com/embed/AbyJignbSj0"></iframe>
 							<table>
-								<caption>Zombieland: Double Tap</caption>
+								<caption>Gemini Man</caption>
 								<tr>
 									<th>Gen</th>
-									<td>Actiune, Comedie, Horror</td>
+									<td>Actiune, Drama, Fictiune</td>
 								</tr>
 								<tr>
 									<th>Durata</th>
-									<td>1h 39min</td>
+									<td>1h 56min</td>
 								</tr>
 								<tr>
 									<th>Distributie</th>
-									<td>Emma Stone, Abigail Breslin, Bill Murray</td>
+									<td>Will Smith, Mary Elizabeth Winstead, Clive Owen</td>
 								</tr>
 								<tr>
 									<th>Regizor</th>
-									<td>Ruben Fleischer</td>
+									<td>Ang Lee</td>
 								</tr>
 								<tr>
 									<th>Clasificare</th>
-									<td>Nerecomandat copiilor sub 15 ani</td>
+									<td>Acord parental pentru copiii sub 12ani.</td>
 								</tr>
 							</table>
 						</div>
 					</div>
-				</section>
+					<div class="container" id="container-viitor">
+						<div class="film">
+							<iframe src="https://www.youtube.com/embed/8Qn_spdM5Zg"></iframe>
+							<table>
+								<caption>Star Wars: The Rise of Skywalker</caption>
+								<tr>
+									<th>Gen</th>
+									<td>Actiune, Aventura, Fantastic</td>
+								</tr>
+								<tr>
+									<th>Durata</th>
+									<td>2h 35min</td>
+								</tr>
+								<tr>
+									<th>Distributie</th>
+									<td>Billie Lourd, Oscar Isaac, Daisy Ridley</td>
+								</tr>
+								<tr>
+									<th>Regizor</th>
+									<td>J.J. Abrams</td>
+								</tr>
+								<tr>
+									<th>Clasificare</th>
+									<td>Acord parental pentru copiii sub 12ani.</</td>
+								</tr>
+							</table>
+						</div>
+					<div class="film">
+							<iframe src="https://www.youtube.com/embed/bwzLiQZDw2I"></iframe>
+							<table>
+								<caption>Frozen II</caption>
+								<tr>
+									<th>Gen</th>
+									<td>Aventura, Animatie, Comedie</td>
+								</tr>
+								<tr>
+									<th>Durata</th>
+									<td>1h 45min</td>
+								</tr>
+								<tr>
+									<th>Distributie</th>
+									<td>Jason Ritter, Kristen Bell, Jonathan Groff</td>
+								</tr>
+								<tr>
+									<th>Regizor</th>
+									<td>Chris Buck, Jennifer Lee</td>
+								</tr>
+								<tr>
+									<th>Clasificare</th>
+									<td>AG</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
 			</main>
 		</body>
 		<footer>
