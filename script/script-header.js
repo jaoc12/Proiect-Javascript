@@ -1,5 +1,4 @@
-window.addEventListener("load",degeaba);
-
-function degeaba(){
-	// asa functioneaza :focus pe iOS
+window.onload = function() {
+	body.onlick() = function() {
+	};
 };
