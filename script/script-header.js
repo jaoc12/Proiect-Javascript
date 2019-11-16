@@ -1,4 +1,3 @@
 window.onload = function() {
-	body.ontouchstart() = function() {
-	};
+	document.body.addEventListener(‘touchstart’,function(){},false);
 };
