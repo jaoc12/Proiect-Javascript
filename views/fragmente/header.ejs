@@ -8,6 +8,14 @@
 			<a href="/filme">Lista filme</a>
 		</div>
 	</li>
+	<% if(locals.user){ %>
+		<li class="sub-meniu">
+			<p class="drop">User curent: <%= user.username %></p>
+			<div class="meniu-continut">
+				<a href="/logout">Logout</a>
+			</div>
+		</li>
+	<% } %>
 	<li class ="sub-meniu">
 		<p class="drop">Bilete</p>
 		<div class="meniu-continut">

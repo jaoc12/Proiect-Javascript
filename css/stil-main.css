@@ -1,3 +1,26 @@
+#login{
+	display: grid;
+	width: 50%;
+	margin: auto;
+	float: left;
+}
+
+.formular{
+	margin: auto;
+	margin-top: 2.5%;
+	background: green;
+	border: 1px solid orange;
+	width: 50%;
+	display: flex;
+}
+
+.formular a{
+	float: right;
+	margin: auto;
+	text-decoration: none;
+	color: black;
+}
+
 h2{
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	color: orange;
