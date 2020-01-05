@@ -19,25 +19,40 @@
 				<% include ../fragmente/header %>
 			</header>
 			<main>
-				<div>
-					<div class="butoane">
-						<h2 id="acum">Ruleaza acum</h2>
-						<h2 id="viitor">In curand</h2>
+				<div class="butoane">
+					<h2 id="acum">Ruleaza acum</h2>
+					<h2 id="viitor">In curand</h2>
+					<div class="checkboxuri">
+						<h3>Alege genuri de film</h3>
+						<div class="container-checkbox">
+							<label>Drama
+								<input type="checkbox" checked="checked" id="Drama">
+							</label>
+							<label>Thriller
+								<input type="checkbox" checked="checked" id="Thriller">
+							</label>
+							<label>Actiune
+								<input type="checkbox" checked="checked" id="Actiune">
+							</label>
+							<label>Comedie
+								<input type="checkbox" checked="checked" id="Comedie">
+							</label>
+						</div>
 					</div>
-					<% if(locals.filme) { %>
-						<% var i; %>
-						<div class="container" id="container-acum">
-							<% for(i = 0; i < 4; i++) { %>
-								<%- include('../fragmente/template_filme.ejs', {film: filme.filme[i]}); %>
-							<% } %>
-						</div>
-						<div class="container" id="container-viitor">
-							<% for(i = 4; i < 6; i++) { %>
-								<%- include('../fragmente/template_filme.ejs', {film: filme.filme[i]}); %>
-							<% } %>
-						</div>
-					<% } %>	
 				</div>
+				<% if(locals.filme) { %>
+					<% var i; %>
+					<div class="container" id="container-acum">
+						<% for(i = 0; i < 4; i++) { %>
+							<%- include('../fragmente/template_filme.ejs', {film: filme.filme[i]}); %>
+						<% } %>
+					</div>
+					<div class="container" id="container-viitor">
+						<% for(i = 4; i < 6; i++) { %>
+							<%- include('../fragmente/template_filme.ejs', {film: filme.filme[i]}); %>
+						<% } %>
+					</div>
+				<% } %>
 			</main>
 			<footer>
 				<% include ../fragmente/footer %>

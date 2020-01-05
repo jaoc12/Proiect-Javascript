@@ -9,15 +9,30 @@ body{
 	border: 1px solid orange;
 }
 
-.butoane h2{
+.butoane h2, .butoane .checkboxuri{
 	border-left: 1px solid white;
 	border-right: 1px solid white;
 	margin: 2%;
+	margin-top: auto;
+	margin-bottom: auto;
 	padding: 2%;
 }
 
 .butoane h2:hover{
 	color: white;
+}
+
+.container-checkbox{
+	display: grid;
+	color: wheat;
+}
+
+label:nth-child(odd){
+	grid-row: 1;
+}
+
+h3{
+	color: orange;
 }
 
 .container{
