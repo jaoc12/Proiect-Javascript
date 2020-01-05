@@ -39,10 +39,12 @@ app.get('/', function(req, res) {
     res.render('html/index',{user: req.session.username});
 });
 app.get('/program', function(req, res) {
-    res.render('html/program',{user: req.session.username});
+    let programJSON = getJSON('program.json');
+    res.render('html/program',{user: req.session.username, program: programJSON});
 });
 app.get('/filme', function(req, res) {
-    res.render('html/filme',{user: req.session.username});
+    let filmeJSON = getJSON('filme.json');
+    res.render('html/filme',{user: req.session.username, filme: filmeJSON});
 });
 app.get('/promotii', function(req, res) {
     res.render('html/promotii',{user: req.session.username});

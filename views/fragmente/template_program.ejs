@@ -1,0 +1,19 @@
+<table>
+    <caption> <%= film.titlu %> </caption>
+    <thead>
+        <tr>
+            <th>ORA</th>
+            <th>FORMAT</th>
+            <th>SALA</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(var i = 0; i < 4; i++) { %>
+            <tr>
+                <td><%= film.randuri[i].ora %></td>
+                <td><%= film.randuri[i].format %></td>
+                <td><%= film.randuri[i].sala %></td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>

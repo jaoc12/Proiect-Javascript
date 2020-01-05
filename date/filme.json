@@ -1,0 +1,58 @@
+{
+    "filme": [
+        {
+            "iframe": "https://www.youtube.com/embed/zAGVQLHvwOY",
+            "titlu": "Joker",
+            "gen": "Crima, Drama, Thriller",
+            "durata": "2h 2min",
+            "distributie": "Joaquin Phoenix, Robert De Niro, Zazie Beetz",
+            "regizor": "Todd Phillips",
+            "clasificare": "Nerecomandat copiilor sub 15 ani"
+        },
+        {
+            "iframe": "https://www.youtube.com/embed/ZlW9yhUKlkQ",
+            "titlu": "Zombieland: Double Tap",
+            "gen": "Actiune, Comedie, Horror",
+            "durata": "1h 39min",
+            "distributie": "Emma Stone, Abigail Breslin, Bill Murray",
+            "regizor": "Ruben Fleischer",
+            "clasificare": "Nerecomandat copiilor sub 15 ani"
+        },
+        {
+            "iframe": "https://www.youtube.com/embed/BOzFZxB-8cw",
+            "titlu": "Doctor Sleep",
+            "gen": "Thriller, Horror",
+            "durata": "2h 31min",
+            "distributie": "Rebbeca Ferguson, Ewan McGregor, Jacob Tremblay",
+            "regizor": "Mike Flanagan",
+            "clasificare": "IM-18"
+        },
+        {
+            "iframe": "https://www.youtube.com/embed/AbyJignbSj0",
+            "titlu": "Gemini Man",
+            "gen": "Actiune, Drama, Fictiune",
+            "durata": "1h 56min",
+            "distributie": "Will Smith, Mary Elizabeth Winstead, Clive Owen",
+            "regizor": "Ang Lee",
+            "clasificare": "Acord parental pentru copiii sub 12ani"
+        },
+        {
+            "iframe": "https://www.youtube.com/embed/8Qn_spdM5Zg",
+            "titlu": "Star Wars: The Rise of Skywalker",
+            "gen": "Actiune, Aventura, Fantastic",
+            "durata": "2h 35min",
+            "distributie": "Billie Lourd, Oscar Isaac, Daisy Ridley",
+            "regizor": "J.J. Abrams",
+            "clasificare": "Acord parental pentru copiii sub 12ani"
+        },
+        {
+            "iframe": "https://www.youtube.com/embed/bwzLiQZDw2I",
+            "titlu": "Frozen II",
+            "gen": "Aventura, Animatie, Comedie",
+            "durata": "1h 45min",
+            "distributie": "Jason Ritter, Kristen Bell, Jonathan Groff",
+            "regizor": "Chris Buck, Jennifer Lee",
+            "clasificare": "AG"
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "vectProgram": [
+        {
+            "titlu": "Joker",
+            "randuri": [
+                {
+                    "ora": "12:30",
+                    "format": "2D",
+                    "sala": "1"
+                },
+                {
+                    "ora": "14:30",
+                    "format": "3D",
+                    "sala": "2"
+                },
+                {
+                    "ora": "15:00",
+                    "format": "2D",
+                    "sala": "1"
+                },
+                {
+                    "ora": "16:30",
+                    "format": "IMAX",
+                    "sala": "3"
+                }
+            ]
+        },
+        {
+            "titlu": "Zombieland: Double Tap",
+            "randuri": [
+                {
+                    "ora": "12:30",
+                    "format": "2D",
+                    "sala": "2"
+                },
+                {
+                    "ora": "14:30",
+                    "format": "2D",
+                    "sala": "1"
+                },
+                {
+                    "ora": "18:00",
+                    "format": "3D",
+                    "sala": "2"
+                },
+                {
+                    "ora": "19:30",
+                    "format": "IMAX",
+                    "sala": "3"
+                }
+            ]
+        },
+        {
+            "titlu": "Doctor Sleep",
+            "randuri": [
+                {
+                    "ora": "15:30",
+                    "format": "2D",
+                    "sala": "2"
+                },
+                {
+                    "ora": "16:20",
+                    "format": "2D",
+                    "sala": "1"
+                },
+                {
+                    "ora": "19:00",
+                    "format": "2D",
+                    "sala": "2"
+                },
+                {
+                    "ora": "21:30",
+                    "format": "IMAX",
+                    "sala": "3"
+                }
+            ]
+        },
+        {
+            "titlu": "Gemini Man",
+            "randuri": [
+                {
+                    "ora": "11:30",
+                    "format": "3D",
+                    "sala": "2"
+                },
+                {
+                    "ora": "13:45",
+                    "format": "3D",
+                    "sala": "1"
+                },
+                {
+                    "ora": "16:00",
+                    "format": "3D",
+                    "sala": "2"
+                },
+                {
+                    "ora": "17:10",
+                    "format": "IMAX",
+                    "sala": "3"
+                }
+            ]
+        }
+    ]
+}
