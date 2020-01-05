@@ -55,12 +55,15 @@ app.get('/bilete', function(req, res) {
 app.get('/inregistrare', function(req, res){
     res.render('html/inregistrare',{user: req.session.username});
 });
+app.get('/login', function(req, res){
+    res.render('html/login', {user: req.session.username});
+});
 app.get('/logout', function(req, res) {
     req.session.destroy();//distrug sesiunea cand se intra pe pagina de logout
     res.redirect('/');
 });
 
-app.post('/', function(req, res) {
+app.post('/login', function(req, res) {
     var form = new formidable.IncomingForm();
     form.parse(req, function(err, fields, files) {
         let fisierJSON = getJSON('useri.json');

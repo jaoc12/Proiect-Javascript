@@ -1,4 +1,9 @@
-<h1><a href="/">Cinema Cave</a></h1>
+<div id="titlu">
+	<h1>
+		<a href="/">Cinema Cave</a>
+	</h1>
+	<img id="camera" src="../../imagini/poze/camera.png">
+</div>
 
 <ul class="meniu">
 	<li class ="sub-meniu">
@@ -9,8 +14,8 @@
 		</div>
 	</li>
 	<% if(locals.user){ %>
-		<li class="sub-meniu">
-			<p class="drop">User curent: <%= user.username %></p>
+		<li id="logat" class="sub-meniu">
+			<p class="drop">Buna: <%= user.username %></p>
 			<div class="meniu-continut">
 				<a href="/logout">Logout</a>
 			</div>

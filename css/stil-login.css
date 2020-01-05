@@ -1,0 +1,23 @@
+#login{
+	display: grid;
+	width: 50%;
+	margin: auto;
+	float: left;
+}
+
+.formular{
+	margin: auto;
+	margin-top: 2.5%;
+	background: green;
+	border: 1px solid orange;
+	width: 50%;
+	display: flex;
+}
+
+.formular a{
+    background: white;
+	float: right;
+	margin: auto;
+	text-decoration: none;
+	color: black;
+}

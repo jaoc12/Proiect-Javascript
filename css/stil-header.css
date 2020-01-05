@@ -9,6 +9,12 @@ header{
 	margin-bottom: 2%;
 }
 
+#camera{
+	position: relative;
+	height: 50px;
+	width: auto;
+}
+
 h1{
 	text-align: center;
 	background-color: orange;
