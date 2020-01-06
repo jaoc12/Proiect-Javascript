@@ -1,6 +1,4 @@
-window.onload = function() {
-	var interval = window.setInterval(animatie,30000);
-};
+var interval = window.setInterval(animatie,30000);
 
 function animatie(){
 	var camera = document.getElementById("camera");
@@ -9,6 +7,7 @@ function animatie(){
 	function animatieInterna() {
 		if(pos == document.getElementById("titlu").offsetWidth - 75){
 			clearInterval(intervalIntern);
+			camera.style.left = 0;
 		}
 		else{
 			pos++;
