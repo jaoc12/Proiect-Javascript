@@ -1,14 +1,43 @@
+var globalSelect;
+var globalRange;
+var globalText;
+var globalRadio;
+
 window.onload = function(){
     showPrimaParte();
-    var rg = document.getElementsByTagName("input")[0];
-    rg.oninput = function(){
-        updateRange(rg.value);
+    globalRange = document.getElementsByTagName("input")[0];
+    globalSelect = document.getElementsByTagName("select")[0];
+    globalText = document.getElementsByTagName("input")[1];
+    globalRadio = document.getElementsByTagName("input")[2];
+    globalRange.oninput = function(){
+        updateRange(globalRange.value);
     }
     var buton = document.getElementById("buton");
     buton.onclick = function(){
-        removePrimaParte();
-        showParteaADoua();
+        if(primaParte()){
+            removePrimaParte();
+            showParteaADoua();
+        }
+        else{
+            window.alert("Toate campurile sunt obligatorii");
+        }
     }
+}
+
+function primaParte(){
+    if(globalText.value){
+        globalSelect = globalSelect.options[globalSelect.selectedIndex].text;
+        globalRange = globalRange.value;
+        globalText = globalText.value;
+        if(globalRadio.checked == true){
+            globalRadio = true;
+        }
+        else{
+            globalRadio = false;
+        }
+        return true;
+    }
+    return false;
 }
 
 function updateRange(val){
@@ -47,7 +76,7 @@ function showPrimaParte(){
     titlu = document.createElement("label"); titlu.innerHTML = "Da"; dv.appendChild(titlu);
     rg = document.createElement("input"); rg.type ="radio"; rg.name = "3D"; rg.value = "da"; dv.appendChild(rg);
     titlu = document.createElement("label"); titlu.innerHTML = "Nu"; dv.appendChild(titlu);
-    rg = document.createElement("input"); rg.type ="radio"; rg.name = "3D"; rg.value = "nu"; dv.appendChild(rg);
+    rg = document.createElement("input"); rg.type ="radio"; rg.name = "3D"; rg.value = "nu"; rg.checked = true; dv.appendChild(rg);
     // buton next
     dv = document.createElement("div"); dv.classList.add("buton"); principal.appendChild(dv);
     buton.id = "buton"; buton.innerHTML = "Mai departe"; dv.appendChild(buton);
@@ -79,7 +108,14 @@ function showLocuri(){
         paragraf.onclick = function(){
             selectare(dv.id);
         }
+        paragraf.onmousemove = function(){
+            showInformatii(dv.id, event);
+        }
+        paragraf.onmouseout = function(){
+            removeInformatii(dv.id);
+        }
     }
+    document.onkeypress = resetareSelectare;
 }
 
 function selectare(idDiv){
@@ -96,4 +132,40 @@ function selectare(idDiv){
     var locuriOcupate = document.getElementById("locuriOcupate");
     var nr = document.querySelectorAll("div.selectat").length;
     locuriOcupate.innerHTML = "Locuri ocupate: " + nr;
+}
+
+function resetareSelectare(e){
+    var key = e.which;
+    if(key == 114){
+        var locuriOcupate = document.querySelectorAll("div.selectat");
+        for(var loc of locuriOcupate){
+            loc.classList.remove("selectat");
+            loc.firstChild.style.background = "green";
+        }
+        var locuriOcupate = document.getElementById("locuriOcupate").innerHTML = "Locuri ocupate: 0";
+    }
+}
+
+function showInformatii(idDiv, event){
+    var paragraf = document.getElementById(idDiv).firstElementChild;
+    var dv = document.getElementById("informatii");
+    if(!dv){
+        dv = document.createElement("div"); dv.style.position = "absolute"; dv.id = "informatii"; dv.style.background = "orange";
+        var lab = document.createElement("label"); dv.appendChild(lab);
+        var nrLoc = parseInt(idDiv[3] + idDiv[4])%7;
+        console.log(nrLoc);
+        if(nrLoc >= 3 && nrLoc <= 5){
+            lab.innerHTML = "Pret: 20Ron<br>Grad confort: A";
+        }
+        else{
+            lab.innerHTML = "Pret: 15Ron<br>Grad confort: B";
+        }
+    }
+    var x = event.clientX; var y = event.clientY;
+    dv.style.left = x + "px"; dv.style.top = y + "px";
+    document.body.appendChild(dv);
+}
+
+function removeInformatii(idDiv){
+    document.body.removeChild(document.getElementById("informatii"));
 }
