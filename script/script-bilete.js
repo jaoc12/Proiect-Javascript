@@ -5,10 +5,10 @@ var globalRadio;
 
 window.onload = function(){
     showPrimaParte();
-    globalRange = document.getElementsByTagName("input")[0];
+    globalRange = document.getElementsByTagName("input")[6];
     globalSelect = document.getElementsByTagName("select")[0];
-    globalText = document.getElementsByTagName("input")[1];
-    globalRadio = document.getElementsByTagName("input")[2];
+    globalText = document.getElementsByTagName("input")[7];
+    globalRadio = document.getElementsByTagName("input")[8];
     globalRange.oninput = function(){
         updateRange(globalRange.value);
     }
@@ -18,25 +18,32 @@ window.onload = function(){
             removePrimaParte();
             showParteaADoua();
         }
-        else{
-            window.alert("Toate campurile sunt obligatorii");
-        }
     }
 }
 
 function primaParte(){
-    if(globalText.value){
-        globalSelect = globalSelect.options[globalSelect.selectedIndex].text;
-        globalRange = globalRange.value;
-        globalText = globalText.value;
-        if(globalRadio.checked == true){
-            globalRadio = true;
+    var filme = {"Joker": 15, "Zombieland: Double Tap": 15, "Doctor Sleep": 18, "Gemini Man": 12};
+    if(globalText.value && document.getElementById("logat")){
+        var selectat = globalSelect.options[globalSelect.selectedIndex];
+        if(parseInt(filme[selectat.value]) <= parseInt(globalRange.value)){
+            document.getElementsByTagName("input")[0].value = selectat.text;
+            document.getElementsByTagName("input")[1].value = globalRange.value;
+            document.getElementsByTagName("input")[2].value = globalText.value;
+            if(globalRadio.checked == true){
+                document.getElementsByTagName("input")[3].value = true;
+            }
+            else{
+                document.getElementsByTagName("input")[3].value = false;
+            }
+            return true;
         }
         else{
-            globalRadio = false;
+            window.alert("Nu ai varsta potrivita pentru a viziona acest film");
+            window.location = "/";
+            return false;
         }
-        return true;
     }
+    window.alert("Trebuie sa completezi toate campurile si sa fii logat");
     return false;
 }
 
@@ -45,6 +52,7 @@ function updateRange(val){
 }
 
 function showPrimaParte(){
+    document.getElementsByTagName("form")[0].style.display = "none";
     var filme = ["Joker", "Zombieland:Double Tap", "Doctor Sleep", "Gemini Man"];
     var principal = document.getElementsByTagName("main")[0];
     var selector = document.createElement("select");
@@ -84,8 +92,8 @@ function showPrimaParte(){
 
 function removePrimaParte(){
     const principal = document.getElementsByTagName("main")[0];
-    while(principal.firstChild){
-        principal.removeChild(principal.firstChild);
+    while(principal.children.length > 1){
+        principal.removeChild(principal.lastElementChild);
     }
 }
 
@@ -95,24 +103,52 @@ function showParteaADoua(){
     var lab = document.createElement("label"); lab.innerHTML = "Locuri ocupate: 0"; lab.id = "locuriOcupate";
     dv.style.background = "black"; dv.style.color = "orange"; dv.appendChild(lab);
     showLocuri();
+    var dv = document.createElement("div"); dv.classList.add("buton"); principal.appendChild(dv);
+    var buton = document.createElement("button"); buton.id = "buton"; buton.innerHTML = "Mai departe"; dv.appendChild(buton);
+    buton.onclick = function(){
+        var locuri ="";
+        let i = 0;
+        var scaune = document.querySelectorAll("div.loc");
+        for(let scaun of scaune){
+            i++;
+            if(scaun.classList.contains("selectat")){
+                locuri = locuri + i + ",";
+            }
+        }
+        document.getElementsByTagName("input")[4].value = locuri;
+        console.log(locuri);
+        document.getElementsByTagName("form")[0].submit();
+    }
 }
 
 function showLocuri(){
     var principal = document.getElementsByTagName("main")[0];
     var dvPrincipal = document.createElement("div"); dvPrincipal.style.display = "grid"; principal.appendChild(dvPrincipal);
+    var ocupate = [];
+    for(let i = 0; i < 7; i++){
+        var k = Math.floor(Math.random() * 28) + 1;
+        ocupate.push(k);
+        console.log(k);
+    }
     for(let i = 1; i <= 28; i++){
         let dv = document.createElement("div"); dv.id = "div" + i; dv.style.gridRow = Math.floor((i - 1) / 7) + 1;
-        dv.style.textAlign = "center"; dvPrincipal.appendChild(dv);
+        dv.style.textAlign = "center"; dvPrincipal.appendChild(dv); dv.classList.add("loc");
         var paragraf = document.createElement("p"); paragraf.innerHTML = i;
         paragraf.style.background = "green"; paragraf.style.border = "1px solid orange"; dv.appendChild(paragraf);
-        paragraf.onclick = function(){
-            selectare(dv.id);
+        if(ocupate.includes(i) == false){
+            paragraf.onclick = function(){
+                selectare(dv.id);
+            }
+            paragraf.onmousemove = function(){
+                showInformatii(dv.id, event);
+            }
+            paragraf.onmouseout = function(){
+                removeInformatii(dv.id);
+            }
         }
-        paragraf.onmousemove = function(){
-            showInformatii(dv.id, event);
-        }
-        paragraf.onmouseout = function(){
-            removeInformatii(dv.id);
+        else{
+            paragraf.style.background = "gray";
+            dv.classList.add = "ocupat";
         }
     }
     document.onkeypress = resetareSelectare;

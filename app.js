@@ -3,6 +3,7 @@ const fs = require('fs');
 const formidable = require("formidable");
 const session = require('express-session');
 const crypto = require('crypto');
+const nodemailer = require("nodemailer");
 //var bodyParser = require('body-parser');
 var app = express();
 
@@ -85,7 +86,6 @@ app.post('/login', function(req, res) {
 });
 
 app.post('/inregistrare', function(req, res) {
-    console.log("ok");
     var form = new formidable.IncomingForm();
     form.parse(req, function(err, fields, files) {
         let fisierJSON = getJSON('useri.json');
@@ -95,6 +95,38 @@ app.post('/inregistrare', function(req, res) {
         fisierJSON.useri.push({id:fisierJSON.lastID, username:fields.username, parola:encrParola, email:fields.email});
         fisierJSON.lastID++;
         setJSON(fisierJSON,'useri.json');
+        res.redirect('/');
+    });
+});
+
+app.post('/bilete', function(req, res){
+    var form = new formidable.IncomingForm();
+    form.parse(req, function(err, fields, files){
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            secure: 'false',
+            auth: {
+                user: "ttestare35@gmail.com",
+                pass: "eURO2020!"
+            },
+            tls: {
+                rejectUnauthorized: false
+            }
+        });
+        const mesaj = {
+            from: "ttestare35@gmail.com",
+            to: req.session.username.email,
+            subject: 'Rezervare bilete Cinema Cave',
+            text: `Locurile ${fields.locuri} pentru filmul ${fields.film} au fost rezervate pe numele: ${fields.nume}. Ochelarii 3D ${fields.ochelari3D === 'false' ? 'nu' : ""} sunt inclusi.`
+        };
+        transporter.sendMail(mesaj, function(err, info) {
+            if(err){
+                console.log(err);
+            }
+            else{
+                console.log(info);
+            }
+        });
         res.redirect('/');
     });
 });
