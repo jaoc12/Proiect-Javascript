@@ -3,7 +3,7 @@ window.onload = function(){
      if(document.getElementById("logat")!==null){
          window.clearTimeout(timeoutId);
      }
-     var text = document.createElement("textarea"); text.rows = "4"; text.cols = "50";
+     var text = document.createElement("textarea"); text.rows = "4"; text.cols = "auto";
      text.innerHTML = "Poti sa trimiti orice sugestie, reclamatie sau mesaj de orice natura";
      var element = document.getElementsByClassName("des")[0];
      element.parentNode.insertBefore(text,element);
