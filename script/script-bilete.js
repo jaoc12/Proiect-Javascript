@@ -104,7 +104,7 @@ function showParteaADoua(){
     dv.style.background = "black"; dv.style.color = "orange"; dv.appendChild(lab);
     showLocuri();
     var dv = document.createElement("div"); dv.classList.add("buton"); principal.appendChild(dv);
-    var buton = document.createElement("button"); buton.id = "buton"; buton.innerHTML = "Mai departe"; dv.appendChild(buton);
+    var buton = document.createElement("button"); buton.id = "buton"; buton.innerHTML = "Finalizeaza comanda"; dv.appendChild(buton);
     buton.onclick = function(){
         var locuri ="";
         let i = 0;
@@ -148,7 +148,7 @@ function showLocuri(){
         }
         else{
             paragraf.style.background = "gray";
-            dv.classList.add = "ocupat";
+            dv.classList.add("ocupat");
         }
     }
     document.onkeypress = resetareSelectare;
@@ -189,12 +189,31 @@ function showInformatii(idDiv, event){
         dv = document.createElement("div"); dv.style.position = "absolute"; dv.id = "informatii"; dv.style.background = "orange";
         var lab = document.createElement("label"); dv.appendChild(lab);
         var nrLoc = parseInt(idDiv[3] + idDiv[4])%7;
-        console.log(nrLoc);
         if(nrLoc >= 3 && nrLoc <= 5){
             lab.innerHTML = "Pret: 20Ron<br>Grad confort: A";
         }
         else{
             lab.innerHTML = "Pret: 15Ron<br>Grad confort: B";
+        }
+        lab = document.createElement("label"); dv.appendChild(lab);
+        var urmator = document.getElementById(idDiv).nextElementSibling;
+        if(urmator!=null){
+            if(urmator.classList.contains("ocupat")){
+                lab.innerHTML = "<br>Locul din dreapta este ocupat";
+            }
+            else{
+                lab.innerHTML = "<br>Locul din dreapta este liber";
+            }
+        }
+        lab = document.createElement("label"); dv.appendChild(lab);
+        var trecut = document.getElementById(idDiv).previousElementSibling;
+        if(trecut!=null){
+            if(trecut.classList.contains("ocupat")){
+                lab.innerHTML = "<br>Locul din stanga este ocupat";
+            }
+            else{
+                lab.innerHTML = "<br>Locul din stanga este liber";
+            }
         }
     }
     var x = event.clientX; var y = event.clientY;

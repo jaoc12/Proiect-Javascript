@@ -57,6 +57,12 @@ blockquote{
 	border: 2px solid black;
 }
 
+textarea{
+	display: block;
+    margin: auto;
+    margin-bottom: 2.5%;
+}
+
 .des{
 	display: flex;
 	border: 5px solid orange;
