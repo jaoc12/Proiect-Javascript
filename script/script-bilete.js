@@ -1,3 +1,4 @@
+
 var globalSelect;
 var globalRange;
 var globalText;
@@ -116,7 +117,7 @@ function showParteaADoua(){
             }
         }
         document.getElementsByTagName("input")[4].value = locuri;
-        console.log(locuri);
+        localStorage.clear();
         document.getElementsByTagName("form")[0].submit();
     }
 }
@@ -125,10 +126,15 @@ function showLocuri(){
     var principal = document.getElementsByTagName("main")[0];
     var dvPrincipal = document.createElement("div"); dvPrincipal.style.display = "grid"; principal.appendChild(dvPrincipal);
     var ocupate = [];
-    for(let i = 0; i < 7; i++){
-        var k = Math.floor(Math.random() * 28) + 1;
-        ocupate.push(k);
-        console.log(k);
+    if(localStorage.getItem("Ocupate") == null){
+        for(let i = 0; i < 7; i++){
+            var k = Math.floor(Math.random() * 28) + 1;
+            ocupate.push(k);
+            localStorage.setItem("Ocupate",JSON.stringify(ocupate));
+        }
+    }
+    else{
+        ocupate = JSON.parse(localStorage.getItem("Ocupate"));
     }
     for(let i = 1; i <= 28; i++){
         let dv = document.createElement("div"); dv.id = "div" + i; dv.style.gridRow = Math.floor((i - 1) / 7) + 1;
