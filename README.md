@@ -1,4 +1,4 @@
-# Proiect-Tehnici-Web
+# Proiect-Javascript
 Website for a fictional cinema.
 
 Made with node js.
