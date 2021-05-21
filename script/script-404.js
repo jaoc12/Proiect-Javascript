@@ -3,4 +3,6 @@ window.onload = function(){
     buton.onclick = function(){
         window.location = "/";
     }
+    var t = document.createTextNode("Cum ai ajuns aici");
+    document.getElementById("text").appendChild(t);
 }

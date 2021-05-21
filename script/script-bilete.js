@@ -88,7 +88,10 @@ function showPrimaParte(){
     rg = document.createElement("input"); rg.type ="radio"; rg.name = "3D"; rg.value = "nu"; rg.checked = true; dv.appendChild(rg);
     // buton next
     dv = document.createElement("div"); dv.classList.add("buton"); principal.appendChild(dv);
-    buton.id = "buton"; buton.innerHTML = "Mai departe"; dv.appendChild(buton);
+    buton.id = "buton"; dv.appendChild(buton);
+    var t = document.createTextNode("Mai departe");
+    dv.appendChild(t);
+    //buton.innerHTML = "Mai departe";
 }
 
 function removePrimaParte(){
